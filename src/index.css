@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Arizonia&family=Mulish:wght@400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Mulish', sans-serif;
+}
+
+/* global classes */
+a {text-decoration: none !important;}
+.ml-auto, .mx-auto {margin-left: auto !important;}
+.mr-auto, .mx-auto {margin-right: auto !important;}
+.f-muli {font-family: 'Mulish', sans-serif !important;}
+.f-ariz {font-family: 'Arizonia', cursive !important;}
+
+.bg-primary-color {background-color: #ffc107 !important;}
+.primary-color {color: #ffc107 !important;}
+/* global classes */
+
+html {font-size: 62.5%;}
+
+.navbar-brand {
+  font-size: 3rem !important;
+  font-family: 'Arizonia', cursive;
+  font-weight: bold;
+}
+.navbar-nav a {font-size: 1.5rem;}
+
+.menu_active {
+  font-weight: 600;
+  border-bottom: .2rem solid #ffc107;
+  color: #ffc107 !important;
+}
+.main {
+  width: 100%;
+  height: 80vh;
+}
+.main .main-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+.btn-get-started {
+  border: .1rem solid #ffc107;
+  outline: none;
+  color: #ffc107;
+  width: 12rem;
+  height: 30rem;
+  padding: .8rem 1.2rem;
+  font-weight: 500;
+}
+.btn-get-started:hover {
+  background-color: #ffc107;
+  color: #000;
+}
+.brand_anim { 
+  position: relative;
+  font-family: 'Arizonia', cursive;
+  font-weight: bold;
+  background: linear-gradient(to right, #ffc107 50%, rgb(255, 255, 255) 50%) right;
+  background-size: 200%;
+  transition: .5s ease-out;
+  animation: brand_anim infinite 4s ease-in-out alternate-reverse;
+}
+
+@keyframes brand_anim {
+  0% {
+    
+  }
+  50% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+.img-anim {
+  animation: img-anim 2s ease-in-out infinite alternate-reverse both;
+}
+
+@-webkit-keyframes img-anim {
+  0% {
+    transform: translateX(2rem);
+  }
+  100% {
+    transform: translateX(-2rem);
+  }
+}
+@keyframes img-anim {
+  0% {
+    transform: translateX(.5rem);
+  }
+  100% {
+    transform: translateX(-0.5rem);
+  }
+}
+
+.sec_desc p {
+  font-size: 1.8rem;
+}
+.service_title {position: relative;}
+.service_title::after {
+  content: '';
+  position: absolute;
+  bottom: .2rem;
+  left: 0;
+  z-index: -1;
+  width: 15rem;
+  height: 1rem;
+  background-color: #ffc107;
+}
